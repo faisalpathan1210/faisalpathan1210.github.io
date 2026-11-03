@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faisalkhan Pathan | Software Engineer</title>
+<meta name="description" content="Cinematic portfolio">
+<meta name="theme-color" content="#050404">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+<canvas id="fog" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="boot" id="boot" aria-hidden="true"></div>
+
+<header class="top" id="top">
+  <a class="brand" href="#hero">Faisalkhan Pathan</a>
+  <nav aria-label="Main">
+    <a href="#universe" data-nav="universe">Universe</a>
+    <a href="#timeline" data-nav="timeline">Timeline</a>
+    <a href="#work" data-nav="work">Work</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+  </nav>
+  <span class="rule" aria-hidden="true"></span>
+</header>
+
+<main>
+
+  <!-- 01 — OPENING -->
+  <section id="hero" data-fog="1">
+    <p class="welcome">welcome to my world</p>
+    <div class="wordwrap"><h1 class="word" id="word" aria-label="Name"></h1></div>
+    <img class="figure" id="figure" alt="" hidden>
+    <video class="figure figure-video" id="figureVideo" autoplay muted loop playsinline hidden></video>
+    <ul class="chips" id="chips"></ul>
+    <p class="tagline" id="tagline"></p>
+    <a class="cue" href="#universe"><span>scroll</span><i></i></a>
+  </section>
+
+  <!-- 02 — THE CREATIVE UNIVERSE -->
+  <section id="universe" class="pin" data-fog=".55">
+    <div class="stage" id="uStage">
+      <canvas id="ribbon" aria-hidden="true"></canvas>
+      <div class="deck" id="uDeck"></div>
+      <div class="u-core">
+        <p class="eyebrow">02 — the toolkit</p>
+        <h2>The creative<br>universe</h2>
+        <p class="about" id="about"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 — THE TIME MACHINE -->
+  <section id="timeline" data-fog=".35">
+    <div class="t-head">
+      <p class="eyebrow">03 — the journey</p>
+      <h2>The time machine</h2>
+      <p class="hint" id="tHint">Move your cursor to swing the clock hand through the years</p>
+    </div>
+    <div class="t-stage" id="tStage">
+      <svg id="tSvg" aria-hidden="true"></svg>
+      <div class="t-cards" id="tCards"></div>
+    </div>
+    <div class="t-detail" id="tDetail" aria-live="polite">
+      <h3 id="tTitle"></h3>
+      <p id="tText"></p>
+    </div>
+  </section>
+
+  <!-- 04 — THE PROJECT UNIVERSE -->
+  <section id="work" data-fog=".5">
+    <div class="w-head">
+      <p class="eyebrow">04 — selected work</p>
+      <h2>The project universe</h2>
+    </div>
+    <div class="stage w-stage" id="wStage">
+      <div class="deck" id="wDeck"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 05 — FINALE -->
+<footer id="contact" data-fog="1">
+  <div class="f-word" id="fWord" aria-hidden="true"></div>
+  <div class="f-copy">
+    <p class="eyebrow">05 — say hello</p>
+    <p class="quote" id="quote"></p>
+    <a class="mail" id="mail" href="#"></a>
+    <div class="f-resume">
+      <a class="btn solid" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+      <a class="btn" href="resume.pdf" download="Faisalkhan_Pathan_Resume.pdf">Download &darr;</a>
+    </div>
+  </div>
+  <div class="f-row">
+    <ul class="socials" id="socials"></ul>
+    <p class="copy" id="copy"></p>
+    <a class="totop" href="#hero">back to top ↑</a>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
