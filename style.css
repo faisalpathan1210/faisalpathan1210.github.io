@@ -492,9 +492,9 @@ body.is-ready .resume-actions { opacity: 1; transform: none; }
   .word > :not(.ch) { display: block; white-space: nowrap; }
 
   /* skill chips: tidy wrapping row above the tagline, not scattered off-screen */
-  .chips {
-    inset: auto; left: var(--pad); right: var(--pad); bottom: 24svh;
-    display: flex; flex-wrap: wrap; gap: 8px;
+    .chips {
+    inset: auto; left: var(--pad); right: var(--pad); top: 31svh; bottom: auto;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
   }
   .chips li {
     position: relative; left: auto; top: auto;
