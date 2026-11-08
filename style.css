@@ -1,6 +1,4 @@
-/* ==========================================================
-   Cinematic portfolio — styles
-   ========================================================== */
+
 @property --mat { syntax: '<number>'; inherits: true; initial-value: 0; }
 
 :root {
@@ -475,4 +473,31 @@ body.is-ready .resume-actions { opacity: 1; transform: none; }
   .word .ch, .figure, .chips li { opacity: 1 !important; transform: none !important; filter: none !important; animation: none !important; }
   .deck { transition: none; }
   [data-reveal] { opacity: 1; transform: none; filter: none; transition: none; }
+}
+
+/* ==========================================================
+   Mobile fixes — name, chips, header
+   ========================================================== */
+@media (max-width: 760px) {
+  /* top bar: smaller brand + nav so they stop colliding */
+  .top { padding: 14px var(--pad); }
+  .brand { font-size: 1.05rem; white-space: nowrap; }
+  .top nav { gap: 12px; }
+  .top nav a { font-size: .6rem; letter-spacing: .1em; }
+
+  /* hero name: sized to the screen width so it never gets cut off */
+  .word { font-size: 10.4vw !important; white-space: nowrap; max-width: 94vw; }
+  /* if each name is wrapped separately, stack them as two lines */
+  .word:has(> :not(.ch)) { white-space: normal; font-size: 17vw !important; line-height: .92; }
+  .word > :not(.ch) { display: block; white-space: nowrap; }
+
+  /* skill chips: tidy wrapping row above the tagline, not scattered off-screen */
+  .chips {
+    inset: auto; left: var(--pad); right: var(--pad); bottom: 24svh;
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .chips li {
+    position: relative; left: auto; top: auto;
+    font-size: .58rem; letter-spacing: .1em; padding: 6px 10px;
+  }
 }
